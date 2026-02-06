@@ -1,49 +1,40 @@
 import 'package:flutter/material.dart';
-import 'package:t10_greenmart/core/style/app_colors.dart';
-import 'package:t10_greenmart/core/style/text_styles.dart';
 
 class CustomTextFormField extends StatelessWidget {
   const CustomTextFormField({
     super.key,
-    required this.labelText,
     required this.hintText,
     this.prefixIcon,
     this.suffixIcon,
+    this.validator,
+    this.onTap,
+    this.keyboardType,
+    this.enabled = true,
   });
-  final String labelText;
+  
   final String hintText;
+  final bool enabled;
   final Widget? prefixIcon;
   final Widget? suffixIcon;
+  final TextInputType? keyboardType;
+  final String? Function(String?)? validator;
+  final Function()? onTap;
 
   @override
   Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(
-          labelText,
-          style: TextStyles.body.copyWith(color: AppColors.grey2),
-        ),
         TextFormField(
+          keyboardType: keyboardType,
           decoration: InputDecoration(
             hintText: hintText,
-            hintStyle: TextStyles.body.copyWith(
-              color: AppColors.grey2,
-              fontWeight: FontWeight.w400,
-            ),
-            enabledBorder: UnderlineInputBorder(
-              borderSide: BorderSide(color: AppColors.primary),
-            ),
-            focusedBorder: UnderlineInputBorder(
-              borderSide: BorderSide(color: AppColors.primary),
-            ),
-            errorBorder: UnderlineInputBorder(
-              borderSide: BorderSide(color: AppColors.error),
-            ),
-            focusedErrorBorder: UnderlineInputBorder(
-              borderSide: BorderSide(color: AppColors.error),
-            ),
+            prefixIcon: prefixIcon,
+            suffixIcon: suffixIcon,
+            enabled: enabled,
           ),
+          validator: validator,
+          onTap: onTap,
         ),
       ],
     );

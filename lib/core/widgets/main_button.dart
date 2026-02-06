@@ -3,11 +3,7 @@ import 'package:t10_greenmart/core/style/app_colors.dart';
 import 'package:t10_greenmart/core/style/text_styles.dart';
 
 class MainButton extends StatelessWidget {
-  const MainButton({
-    super.key,
-    required this.text,
-    required this.onPress,
-  });
+  const MainButton({super.key, required this.text, required this.onPress});
 
   final String text;
   final Function() onPress;
@@ -17,18 +13,13 @@ class MainButton extends StatelessWidget {
     return ElevatedButton(
       style: ElevatedButton.styleFrom(
         backgroundColor: AppColors.primary,
-        minimumSize: Size(double.infinity, 65),
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(16),
-        ),
+        minimumSize: Size(double.infinity, 55),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
       ),
       onPressed: () {
         onPress();
       },
-      child: Text(
-        text,
-        style: TextStyles.elevatedButton,
-      ),
+      child: Text(text, style: TextStyles.elevatedButton),
     );
   }
 }

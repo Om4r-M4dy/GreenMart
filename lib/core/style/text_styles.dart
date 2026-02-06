@@ -4,36 +4,38 @@ import 'package:t10_greenmart/core/style/app_colors.dart';
 class TextStyles {
   static TextStyle headline = TextStyle(
     fontSize: 48,
-    fontFamily: 'Poppins',
-    fontWeight: FontWeight.w600,
     color: AppColors.white,
+    fontWeight: FontWeight.w600,
   );
 
   static TextStyle elevatedButton = TextStyle(
-    fontSize: 18,
-    fontFamily: 'Poppins',
-    fontWeight: FontWeight.w600,
+    fontSize: 16,
     color: AppColors.white,
+    fontWeight: FontWeight.w600,
   );
 
   static TextStyle subHeadline = TextStyle(
     fontSize: 26,
-    fontFamily: 'Poppins',
     fontWeight: FontWeight.w600,
-    color: AppColors.black,
+  );
+
+  static TextStyle title = TextStyle(
+    fontSize: 22,
+    fontWeight: FontWeight.w600,
   );
 
   static TextStyle body = TextStyle(
     fontSize: 16,
-    fontFamily: 'Poppins',
     fontWeight: FontWeight.w600,
-    color: AppColors.black,
   );
 
   static TextStyle caption = TextStyle(
     fontSize: 14,
-    fontFamily: 'Poppins',
     fontWeight: FontWeight.w600,
-    color: AppColors.black,
+  );
+
+  static TextStyle small = TextStyle(
+    fontSize: 12,
+    fontWeight: FontWeight.w600,
   );
 }
