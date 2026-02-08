@@ -11,4 +11,5 @@ class AppColors {
   static const Color error = Color(0xffFF0000);
   static const Color otpColor = Color(0xffF37A20);
   static const Color borderColor  = Color(0xffF0F1F2);
+  static const Color ratingColor = Color(0xffF3603F);
 }

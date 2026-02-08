@@ -4,7 +4,7 @@ import 'package:t10_greenmart/core/style/app_colors.dart';
 import 'package:t10_greenmart/core/style/text_styles.dart';
 import 'package:t10_greenmart/core/widgets/custom_text_form_field.dart';
 import 'package:t10_greenmart/core/widgets/main_button.dart';
-import 'package:t10_greenmart/features/auth/verification.dart';
+import 'package:t10_greenmart/features/auth/pages/verification.dart';
 
 class Number extends StatefulWidget {
   const Number({super.key});

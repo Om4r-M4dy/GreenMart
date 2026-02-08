@@ -1,6 +1,5 @@
 class AppAssets {
   static const String logoSvg = 'assets/images/logo.svg';
-  static const String welcomePng = 'assets/images/welcome.png';
   static const String carrotSvg = 'assets/icons/carrot.svg';
   static const String accountSvg = 'assets/icons/account.svg';
   static const String cartSvg = 'assets/icons/cart.svg';
@@ -8,6 +7,21 @@ class AppAssets {
   static const String favouriteSvg = 'assets/icons/favourite.svg';
   static const String shopSvg = 'assets/icons/shop.svg';
   static const String greenMartSvg = 'assets/icons/GreenMart.svg';
+  static const String welcomePng = 'assets/images/welcome.png';
   static const String bananasPng = 'assets/images/bananas.png';
   static const String redApplePng = 'assets/images/red_apple.png';
+  static const String bellPepperRedPng = 'assets/images/bell_pepper_red.png';
+  static const String gingerPng = 'assets/images/ginger.png';
+  static const String cocacolaPng = 'assets/images/cocacola.png';
+  static const String dietCokePng = 'assets/images/diet_coke.png';
+  static const String pepsiPng = 'assets/images/pepsi.png';
+  static const String spritePng = 'assets/images/sprite.png';
+  static const String treeTopJuiceAppleGrapePng = 'assets/images/tree-top-juice-apple-grape.png';
+  static const String treeTopJuiceOrangePineapplePng = 'assets/images/tree-top-juice-orange-pineapple.png';
+  static const String beveragesPng = 'assets/images/beverages.png';
+  static const String cookingOilGheePng = 'assets/images/cooking_oil&ghee.png';
+  static const String dairyEggsPng = 'assets/images/dairy&eggs.png';
+  static const String fruitsVegetablePng = 'assets/images/fruits&vegetable.png';
+  static const String meatFishPng = 'assets/images/meat&fish.png';
+  static const String bakerySnacksPng = 'assets/images/bakery&snaks.png';
 }

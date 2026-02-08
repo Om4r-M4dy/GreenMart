@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:t10_greenmart/features/auth/login.dart';
+import 'package:t10_greenmart/features/auth/pages/login.dart';
 import 'package:t10_greenmart/core/constants/app_assets.dart';
 import 'package:t10_greenmart/core/functions/navigations.dart';
 import 'package:t10_greenmart/core/style/app_colors.dart';
 import 'package:t10_greenmart/core/style/text_styles.dart';
 import 'package:t10_greenmart/core/widgets/main_button.dart';
+import 'package:t10_greenmart/features/main/main_app_screen.dart';
 
 class Onboarding extends StatelessWidget {
   const Onboarding({super.key});
@@ -52,7 +53,7 @@ class Onboarding extends StatelessWidget {
                       MainButton(
                         text: 'Get Started',
                         onPress: () {
-                          replacement(context, Login());
+                          replacement(context, MainAppScreen());
                         },
                       ),
                     ],

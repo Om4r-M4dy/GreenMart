@@ -21,7 +21,12 @@ class MainApp extends StatelessWidget {
           seedColor: AppColors.primary,
           onSurface: AppColors.black,
         ),
-        appBarTheme: AppBarTheme(backgroundColor: Colors.white),
+        appBarTheme: AppBarTheme(
+          backgroundColor: AppColors.white,
+          surfaceTintColor: Colors.transparent,
+        ),
+        dividerTheme: DividerThemeData(color: AppColors.borderColor),
+        dividerColor: Colors.transparent,
         inputDecorationTheme: InputDecorationTheme(
           fillColor: AppColors.accent,
           filled: true,
@@ -30,23 +35,23 @@ class MainApp extends StatelessWidget {
             fontWeight: FontWeight.w400,
           ),
           enabledBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(12),
+            borderRadius: BorderRadius.circular(14),
             borderSide: BorderSide.none,
           ),
           focusedBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(12),
+            borderRadius: BorderRadius.circular(14),
             borderSide: BorderSide.none,
           ),
           errorBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(12),
+            borderRadius: BorderRadius.circular(14),
             borderSide: BorderSide.none,
           ),
           focusedErrorBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(12),
+            borderRadius: BorderRadius.circular(14),
             borderSide: BorderSide.none,
           ),
           disabledBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(12),
+            borderRadius: BorderRadius.circular(14),
             borderSide: BorderSide.none,
           ),
         ),

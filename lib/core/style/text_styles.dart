@@ -24,6 +24,11 @@ class TextStyles {
     fontWeight: FontWeight.w600,
   );
 
+  static TextStyle subtitle = TextStyle(
+    fontSize: 18,
+    fontWeight: FontWeight.w600,
+  );
+
   static TextStyle body = TextStyle(
     fontSize: 16,
     fontWeight: FontWeight.w600,
