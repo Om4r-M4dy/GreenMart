@@ -3,14 +3,19 @@ import 'package:t10_greenmart/core/style/app_colors.dart';
 import 'package:t10_greenmart/core/style/text_styles.dart';
 
 class CustomSearchBar extends StatelessWidget {
-  const CustomSearchBar({super.key, this.focusNode});
+  const CustomSearchBar({super.key, this.focusNode, this.onChanged});
 
   final FocusNode? focusNode;
+  final Function(String)? onChanged;
 
   @override
   Widget build(BuildContext context) {
     return SearchBar(
+      onChanged: onChanged,
       focusNode: focusNode,
+      onTapOutside: (event) {
+        FocusManager.instance.primaryFocus?.unfocus();
+      },
       backgroundColor: WidgetStatePropertyAll(AppColors.accent),
       shape: WidgetStatePropertyAll(
         RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),

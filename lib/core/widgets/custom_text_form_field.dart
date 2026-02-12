@@ -11,7 +11,7 @@ class CustomTextFormField extends StatelessWidget {
     this.keyboardType,
     this.enabled = true,
   });
-  
+
   final String hintText;
   final bool enabled;
   final Widget? prefixIcon;
@@ -27,6 +27,9 @@ class CustomTextFormField extends StatelessWidget {
       children: [
         TextFormField(
           keyboardType: keyboardType,
+          onTapOutside: (event) {
+            FocusManager.instance.primaryFocus?.unfocus();
+          },
           decoration: InputDecoration(
             hintText: hintText,
             prefixIcon: prefixIcon,

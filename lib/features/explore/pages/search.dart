@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:t10_greenmart/core/style/app_colors.dart';
+import 'package:t10_greenmart/features/explore/data/product_model.dart';
 import 'package:t10_greenmart/features/explore/widgets/custom_search_bar.dart';
 import 'package:t10_greenmart/features/explore/widgets/exclusive_offer_list_view.dart';
 
@@ -27,6 +28,9 @@ class _SearchScreenState extends State<SearchScreen> {
     super.dispose();
   }
 
+  String _searchQuery = '';
+  String massage1 = 'Suggested for you';
+  String massage2 = 'No Search Result Found';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -38,21 +42,32 @@ class _SearchScreenState extends State<SearchScreen> {
             Navigator.pop(context);
           },
         ),
-        title: CustomSearchBar(focusNode: _searchFocusNode),
+        title: CustomSearchBar(
+          focusNode: _searchFocusNode,
+          onChanged: (value) {
+            setState(() {
+              _searchQuery = value;
+              if (_searchQuery.isEmpty) {
+                massage1 = 'Suggested for you';
+                massage2 = 'No Search Result Found';
+              } else {
+                massage1 = 'Results';
+                massage2 = '';
+              }
+            });
+          },
+        ),
       ),
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Padding(
-              padding: const EdgeInsets.all(25),
-              child: Text('Suggested for you'),
-            ),
-            ExclusiveOfferListView(),
+            Padding(padding: const EdgeInsets.all(25), child: Text(massage1)),
+            ExclusiveOfferListView(products: getProductByName(_searchQuery)),
             SizedBox(height: 40),
             Center(
               child: Text(
-                'No Search Result Found',
+                massage2,
                 style: TextStyle(fontSize: 18, color: AppColors.grey2),
               ),
             ),

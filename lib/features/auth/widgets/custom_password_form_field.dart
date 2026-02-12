@@ -23,6 +23,9 @@ class _CustomPasswordFormFieldState extends State<CustomPasswordFormField> {
         ),
         TextFormField(
           obscureText: obscureText,
+          onTapOutside: (event) {
+            FocusManager.instance.primaryFocus?.unfocus();
+          },
           decoration: InputDecoration(
             hintText: 'Enter your password',
             suffixIcon: IconButton(

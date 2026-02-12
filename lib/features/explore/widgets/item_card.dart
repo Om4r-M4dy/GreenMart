@@ -3,7 +3,7 @@ import 'package:t10_greenmart/core/functions/navigations.dart';
 import 'package:t10_greenmart/core/style/app_colors.dart';
 import 'package:t10_greenmart/core/style/text_styles.dart';
 import 'package:t10_greenmart/features/explore/data/product_model.dart';
-import 'package:t10_greenmart/features/explore/pages/product_detail.dart';
+import 'package:t10_greenmart/features/explore/pages/product_detail/product_detail.dart';
 
 class ItemCard extends StatelessWidget {
   const ItemCard({super.key, required this.product});

@@ -3,8 +3,11 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:t10_greenmart/core/constants/app_assets.dart';
 import 'package:t10_greenmart/core/style/app_colors.dart';
 import 'package:t10_greenmart/core/style/text_styles.dart';
+import 'package:t10_greenmart/features/cart/my_cart.dart';
 import 'package:t10_greenmart/features/explore/pages/explore.dart';
-import 'package:t10_greenmart/features/explore/pages/home_screen.dart';
+import 'package:t10_greenmart/features/explore/pages/favorites.dart';
+import 'package:t10_greenmart/features/explore/pages/home/home_screen.dart';
+import 'package:t10_greenmart/features/profile/account.dart';
 
 class MainAppScreen extends StatefulWidget {
   const MainAppScreen({super.key});
@@ -18,9 +21,9 @@ class _MainAppScreenState extends State<MainAppScreen> {
   List<Widget> screens = [
     HomeScreen(),
     ExploreScreen(),
-    Center(child: Text('Cart Screen')),
-    Center(child: Text('Favourite Screen')),
-    Center(child: Text('Account Screen')),
+    MyCartPage(),
+    FavoritesPage(),
+    AccountPage(),
   ];
   @override
   Widget build(BuildContext context) {

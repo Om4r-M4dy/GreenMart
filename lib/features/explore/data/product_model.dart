@@ -9,6 +9,7 @@ class ProductModel {
   final String? description;
   final double? review;
   final String? tag;
+  int count;
 
   ProductModel({
     this.name,
@@ -19,8 +20,148 @@ class ProductModel {
     this.description,
     this.review,
     this.tag,
+    this.count = 1,
   });
+  ProductModel copyWith({
+    String? id,
+    String? name,
+    String? image,
+    double? price,
+    String? quantity,
+    String? description,
+    double? review,
+    String? tag,
+    int? count,
+  }) {
+    return ProductModel(
+      id: id ?? this.id,
+      name: name ?? this.name,
+      image: image ?? this.image,
+      price: price ?? this.price,
+      quantity: quantity ?? this.quantity,
+      description: description ?? this.description,
+      review: review ?? this.review,
+      tag: tag ?? this.tag,
+      count: count ?? this.count,
+    );
+  }
 }
+
+List<ProductModel> getProductByName(String productName) {
+  return allProducts
+      .where((item) => item.name?.toLowerCase().contains(productName) == true)
+      .toList();
+}
+
+List<ProductModel> allProducts = [
+  ProductModel(
+    id: '1',
+    name: 'Red Apples',
+    image: 'assets/images/red_apple.png',
+    price: 3.99,
+    quantity: '1kg',
+    description:
+        'Apples are nutritious. Apples may be good for weight loss. apples may be good for your heart. As part of a healtful and varied diet.',
+    review: 4.5,
+    tag: UniqueKey().toString(),
+  ),
+  ProductModel(
+    id: '2',
+    name: 'Organic Bananas',
+    image: 'assets/images/bananas.png',
+    price: 1.99,
+    quantity: '1kg',
+    description:
+        'Sweet and ripe organic bananas, great for smoothies and desserts.',
+    review: 4.7,
+    tag: UniqueKey().toString(),
+  ),
+  ProductModel(
+    id: '3',
+    name: 'Bell Pepper Red',
+    image: 'assets/images/bell_pepper_red.png',
+    price: 3.99,
+    quantity: '1kg',
+    description:
+        'Crisp and juicy red bell peppers, perfect for salads or cooking.',
+    tag: UniqueKey().toString(),
+    review: 4.5,
+  ),
+  ProductModel(
+    id: '4',
+    name: 'Ginger',
+    image: 'assets/images/ginger.png',
+    price: 1.99,
+    quantity: '1kg',
+    description:
+        'Fresh ginger root, perfect for cooking and adding flavor to dishes.',
+    tag: UniqueKey().toString(),
+    review: 4.7,
+  ),
+  ProductModel(
+    id: '5',
+    name: 'Diet Cola Can',
+    image: 'assets/images/diet_coke.png',
+    price: 1.99,
+    quantity: '355ml',
+    description:
+        'Refreshing diet cola, perfect for those who want a sweet taste without the calories.',
+    review: 4.7,
+    tag: UniqueKey().toString(),
+  ),
+  ProductModel(
+    id: '6',
+    name: 'Sprite Can',
+    image: 'assets/images/sprite.png',
+    price: 1.99,
+    quantity: '325ml',
+    description: 'Refreshing Sprite, perfect for those who want a sweet taste.',
+    tag: UniqueKey().toString(),
+    review: 4.7,
+  ),
+  ProductModel(
+    id: '7',
+    name: 'Apple & Grape Juice',
+    image: 'assets/images/tree-top-juice-apple-grape.png',
+    price: 1.99,
+    quantity: '2L',
+    description: 'apple and grape juice, packed with natural vitamins.',
+    tag: UniqueKey().toString(),
+    review: 4.7,
+  ),
+  ProductModel(
+    id: '8',
+    name: 'Orange & Pineapple Juice',
+    image: 'assets/images/tree-top-juice-orange-pineapple.png',
+    price: 1.99,
+    quantity: '2L',
+    description:
+        'orange and pineapple juice, packed with vitamin C and natural sweetness.',
+    review: 4.7,
+    tag: UniqueKey().toString(),
+  ),
+  ProductModel(
+    id: '9',
+    name: 'CocaCola Can',
+    image: 'assets/images/cocacola.png',
+    price: 1.99,
+    quantity: '355ml',
+    description:
+        'Refreshing CocaCola, perfect for those who want a sweet taste.',
+    review: 4.7,
+    tag: UniqueKey().toString(),
+  ),
+  ProductModel(
+    id: '10',
+    name: 'Pepsi Can',
+    image: 'assets/images/pepsi.png',
+    price: 1.99,
+    quantity: '320ml',
+    description: 'Refreshing Pepsi, perfect for those who want a sweet taste.',
+    tag: UniqueKey().toString(),
+    review: 4.7,
+  ),
+];
 
 List<ProductModel> exclusiveProducts = [
   ProductModel(

@@ -5,7 +5,7 @@ import 'package:t10_greenmart/core/style/app_colors.dart';
 import 'package:t10_greenmart/features/explore/widgets/best_selling_grid_view.dart';
 import 'package:t10_greenmart/features/explore/widgets/exclusive_offer_list_view.dart';
 import 'package:t10_greenmart/features/explore/widgets/search_button.dart';
-import 'package:t10_greenmart/features/explore/widgets/title_and_see_all.dart';
+import 'package:t10_greenmart/features/explore/pages/home/widgets/title_and_see_all.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});

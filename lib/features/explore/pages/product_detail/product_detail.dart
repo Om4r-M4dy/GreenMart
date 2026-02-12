@@ -4,6 +4,8 @@ import 'package:t10_greenmart/core/style/app_colors.dart';
 import 'package:t10_greenmart/core/style/text_styles.dart';
 import 'package:t10_greenmart/core/widgets/main_button.dart';
 import 'package:t10_greenmart/features/explore/data/product_model.dart';
+import 'package:t10_greenmart/features/explore/pages/product_detail/widgets/custom_product_image.dart';
+import 'package:t10_greenmart/features/explore/pages/product_detail/widgets/product_name.dart';
 
 class ProductDetailScreen extends StatefulWidget {
   const ProductDetailScreen({super.key, required this.product});
@@ -23,79 +25,13 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Container(
-              height: 335,
-              decoration: BoxDecoration(
-                color: AppColors.borderColor,
-                borderRadius: BorderRadius.only(
-                  bottomLeft: Radius.circular(24),
-                  bottomRight: Radius.circular(24),
-                ),
-              ),
-              child: Column(
-                children: [
-                  SizedBox(height: 40),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      IconButton(
-                        onPressed: () => Navigator.pop(context),
-                        icon: const Icon(Icons.arrow_back_ios_new_rounded),
-                      ),
-                      Transform.translate(
-                        offset: Offset(-5, 0),
-                        child: IconButton(
-                          onPressed: () {},
-                          icon: const Icon(Icons.ios_share_rounded),
-                        ),
-                      ),
-                    ],
-                  ),
-                  const SizedBox(height: 20),
-                  SizedBox(
-                    height: 180,
-                    child: Hero(
-                      tag: widget.product.tag ?? '',
-                      child: Image.asset(
-                        widget.product.image ?? '',
-                        fit: BoxFit.contain,
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ),
+            CustomProductImage(widget: widget),
             Padding(
               padding: const EdgeInsets.all(25.0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            widget.product.name ?? '',
-                            style: TextStyles.subtitle,
-                          ),
-                          SizedBox(height: 10),
-                          Text(
-                            '${widget.product.quantity}',
-                            style: TextStyles.caption.copyWith(
-                              color: AppColors.grey2,
-                            ),
-                          ),
-                        ],
-                      ),
-                      IconButton(
-                        color: AppColors.grey2,
-                        onPressed: () {},
-                        icon: Icon(Icons.favorite_border_rounded),
-                      ),
-                    ],
-                  ),
+                  ProductName(widget: widget),
                   SizedBox(height: 30),
                   Transform.translate(
                     offset: Offset(-15, 0),

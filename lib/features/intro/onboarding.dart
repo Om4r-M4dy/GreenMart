@@ -6,7 +6,6 @@ import 'package:t10_greenmart/core/functions/navigations.dart';
 import 'package:t10_greenmart/core/style/app_colors.dart';
 import 'package:t10_greenmart/core/style/text_styles.dart';
 import 'package:t10_greenmart/core/widgets/main_button.dart';
-import 'package:t10_greenmart/features/main/main_app_screen.dart';
 
 class Onboarding extends StatelessWidget {
   const Onboarding({super.key});
@@ -53,7 +52,7 @@ class Onboarding extends StatelessWidget {
                       MainButton(
                         text: 'Get Started',
                         onPress: () {
-                          replacement(context, MainAppScreen());
+                          replacement(context, Login());
                         },
                       ),
                     ],
