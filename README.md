@@ -21,8 +21,18 @@ A new Flutter project.
   <img src="https://github.com/omar-mady-honeybadger/t10_greenmart/blob/main/assets/screenshots/verification.png" width="45%" />
 </p>
 
-## Explore screen
+## Explore screens
 
 <p float="left">
   <img src="https://github.com/omar-mady-honeybadger/t10_greenmart/blob/main/assets/screenshots/home_screen.png" width="45%" />
+  <img src="https://github.com/omar-mady-honeybadger/t10_greenmart/blob/main/assets/screenshots/explore.png" width="45%" />
+</p>
+
+<p float="left">
+  <img src="https://github.com/omar-mady-honeybadger/t10_greenmart/blob/main/assets/screenshots/product_detail.png" width="45%" />
+  <img src="https://github.com/omar-mady-honeybadger/t10_greenmart/blob/main/assets/screenshots/beverages.png" width="45%" />
+</p>
+
+<p float="left">
+  <img src="https://github.com/omar-mady-honeybadger/t10_greenmart/blob/main/assets/screenshots/searsh.png" width="45%" />
 </p>
