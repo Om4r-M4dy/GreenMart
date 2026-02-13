@@ -26,4 +26,5 @@ class AppAssets {
   static const String meatFishPng = 'assets/images/meat&fish.png';
   static const String bakerySnacksPng = 'assets/images/bakery&snaks.png';
   static const String successPng = 'assets/images/success.png';
+  static const String profilePng = 'assets/images/profile.png';
 }

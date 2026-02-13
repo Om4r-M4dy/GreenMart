@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:t10_greenmart/core/constants/app_assets.dart';
 import 'package:t10_greenmart/core/functions/navigations.dart';
 import 'package:t10_greenmart/core/style/app_colors.dart';
 import 'package:t10_greenmart/core/style/text_styles.dart';
@@ -18,7 +19,10 @@ class AccountPage extends StatelessWidget {
               children: [
                 const SizedBox(height: 20),
                 ListTile(
-                  leading: CircleAvatar(),
+                  leading: CircleAvatar(
+                    radius: 30,
+                    backgroundImage: AssetImage(AppAssets.profilePng),
+                  ),
                   title: Text(
                     'Omar Mady',
                     style: TextStyles.subtitle.copyWith(

@@ -8,7 +8,7 @@ class BestSellingGridView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 245,
+      height: 400.0,
       child: GridView.builder(
         scrollDirection: Axis.vertical,
         padding: const EdgeInsets.symmetric(horizontal: 15.0),
