@@ -86,7 +86,7 @@ class _MainAppScreenState extends State<MainAppScreen> {
                 AppAssets.favouriteSvg,
                 colorFilter: ColorFilter.mode(AppColors.primary, BlendMode.srcIn),
               ),
-              label: 'Favourite',
+              label: 'Favorite',
             ),
             BottomNavigationBarItem(
               icon: SvgPicture.asset(AppAssets.accountSvg),
